@@ -1,0 +1,192 @@
+
+:root{
+  --fuentePrincipal: sans-serif;
+  --mainColor:rgba(255, 0, 0, 0.671);
+  --azul:#7747FF;
+}
+*{
+  font-family: var(--fuentePrincipal);
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+.contenido{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.formulario_full{
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 1rem;
+    margin-bottom: 4rem;
+    border-radius: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+
+}
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .rating input {
+    display: none;
+  }
+  
+  .rating label {
+    cursor: pointer;
+  }
+  
+  .rating label i {
+    font-size: 24px; /* Tamaño del icono */
+    padding: 0 1rem;
+    color: #888; /* Color de las estrellas no seleccionadas */
+  }
+  
+  .rating input:checked ~ label i {
+    color: gold; /* Color de las estrellas seleccionadas */
+  }
+  
+  .rating label i {
+    font-size: 3rem;
+}
+
+.formulario__input{
+  width: 20rem;
+  height: 3rem;
+  border:1px solid #B3B3B3;
+  outline: none;
+  border-radius: 0.5rem;
+
+}
+
+.formulario__input:hover{
+  border: 1px solid var(--mainColor);
+}
+
+.obser{
+  display: flex;
+  flex-direction: column;
+margin-top: 1rem;
+}
+.obser_text_area{
+  width: 25rem;
+  height: 15rem;
+}
+.enviar__form{
+  padding: 1.3rem;
+  width: 14rem;
+  font-size: 1.2rem;
+  background-color: var(--azul);
+  border: none;
+  color: wheat;
+  border-radius: 0.5rem;
+}
+
+.enviar__form:hover{
+  cursor: pointer;
+  background-color: darkcyan;
+}
+.calidad{
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  font-weight: 100;
+}
+.label__obser{
+  margin-top: 2rem;
+}
+option{
+  font-size: 1rem;
+}
+::placeholder{
+  font-size: 1rem;
+}
+#tipo_servicio {
+  font-size: 1rem;
+}
+
+.correo__empresa.campo,.nombre__persona.campo,.nombre__empresa.campo,.select.campo,.estado__empresa.campo{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  gap: 1rem;
+}
+.correo__empresa.campo i {
+  color: var(--azul); 
+  font-size: 2.5rem 
+}
+
+.nombre__persona.campo i {
+  color: var(--azul); 
+  font-size: 2.5rem 
+}
+.nombre__empresa.campo i {
+  color: var(--azul); 
+  font-size: 2.5rem 
+}
+
+.select.campo i {
+  color: var(--azul); 
+  font-size: 2.5rem 
+}
+
+.estado__empresa.campo i {
+  color: var(--azul); 
+  font-size: 2.5rem 
+}
+
+
+.sombra{
+  box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+  background-color: #FFF;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+@media (min-width:200px ) and (max-width:599px) {
+  .formulario_full{
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 1rem;
+    margin-bottom: 4rem;
+    border-radius: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+
+}
+.formulario__input{
+  width: 15rem;
+  height: 3rem;
+  border:1px solid #B3B3B3;
+  outline: none;
+  border-radius: 0.5rem;
+
+}
+.rating label i {
+  font-size: 2.5rem;
+  padding: 0.5rem;
+  color: #888; 
+}
+.enviar__form{
+  padding: 0.8rem;
+  width: 14rem;
+  font-size: 1.2rem;
+  background-color: var(--azul);
+  border: none;
+  color: wheat;
+  border-radius: 0.5rem;
+}
+}

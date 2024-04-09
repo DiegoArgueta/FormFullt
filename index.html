@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de registro</title>
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div class="contenido">
+        <div class="imgagen_logo">
+            <img src="logo.png" alt="Logo Formulario" class="logo">
+        </div>
+        <form action="/" method="POST" class="formulario_full sombra" onsubmit="return validarFormulario()">
+
+            <div class="contenido__formulario">
+                
+            </div>
+            <div class="select campo">
+                <i class="bi bi-gear-fill"></i>
+                <select class="formulario__input" name="servicio" id="tipo_servicio" required>
+                    <option class="disabled__option" value="" selected disabled>--Seleccionar servicio--</option>
+                    <option value="FullTrack">FullTrack</option>
+                    <option value="FullArm">FullArm</option>
+                    <option value="FullCam">FullCam</option>
+                    <option value="FullCond">FullCond</option>
+                    <option value="FullCenter">FullCenter</option>
+                    <option value="Sims">Sims</option>
+                    <option value="Equipo GPS">Equipo GPS</option>
+                </select>
+            </div>
+            <div class="nombre__persona campo">
+                <i class="bi bi-person-circle"></i>
+                <input class="formulario__input" type="text" name="nombre" id="nombre" placeholder="Nombre persona" required>
+            </div>
+            <div class="correo__empresa campo">
+                <i class="bi bi-envelope-at-fill" id="iconos"></i>
+                <input class="formulario__input form-control" type="email" name="correo" id="correo" placeholder="Correo electrónico de la empresa" required>
+            </div>
+            
+            <div class="nombre__empresa campo">
+                <i class="bi bi-building-fill-add"></i>
+                <input class="formulario__input" type="text" name="empresa" id="empresa" placeholder="Nombre comercial de la empresa" required>
+            </div>
+
+            <div class="estado__empresa campo">
+                <i class="bi bi-globe-asia-australia"></i>
+                <input type="text" class="formulario__input" id="estado" name="estado" placeholder="Estado" list="estadosList" required>
+    <datalist class="formulario__input" id="estadosList">
+        <option value="Aguascalientes">
+            <option value="Baja California">
+            <option value="Baja California Sur">
+            <option value="Campeche">
+            <option value="Chiapas">
+            <option value="Chihuahua">
+            <option value="Coahuila">
+            <option value="Colima">
+            <option value="Durango">
+            <option value="Guanajuato">
+            <option value="Guerrero">
+            <option value="Hidalgo">
+            <option value="Jalisco">
+            <option value="México">
+            <option value="Michoacán">
+            <option value="Morelos">
+            <option value="Nayarit">
+            <option value="Nuevo León">
+            <option value="Oaxaca">
+            <option value="Puebla">
+            <option value="Querétaro">
+            <option value="Quintana Roo">
+            <option value="San Luis Potosí">
+            <option value="Sinaloa">
+            <option value="Sonora">
+            <option value="Tabasco">
+            <option value="Tamaulipas">
+            <option value="Tijuana">
+            <option value="Tlaxcala">
+            <option value="Veracruz">
+            <option value="Yucatán">
+            <option value="Zacatecas">
+    </datalist>
+            </div>
+
+            <label for="" class="formulario__label calidad">Calidad:</label>
+            <div class="rating ">
+                <input type="radio" id="star5" name="calidad" value="5" onclick="validarEstrellas()">
+                <label for="star5"><i class="bi bi-star-fill estrella"></i></label>
+                <input type="radio" id="star4" name="calidad" value="4" onclick="validarEstrellas()">
+                <label for="star4"><i class="bi bi-star-fill estrella"></i></label>
+                <input type="radio" id="star3" name="calidad" value="3" onclick="validarEstrellas()">
+                <label for="star3"><i class="bi bi-star-fill estrella"></i></label>
+                <input type="radio" id="star2" name="calidad" value="2" onclick="validarEstrellas()">
+                <label for="star2"><i class="bi bi-star-fill estrella"></i></label>
+                <input type="radio" id="star1" name="calidad" value="1" onclick="validarEstrellas()">
+                <label for="star1"><i class="bi bi-star-fill estrella"></i></label>
+            </div>        
+            <div class="obser campo">
+                <textarea class="formulario__input obser_text_area"  id="obervaciones" name="observaciones" cols="30" rows="10" placeholder="Información del cliente" required></textarea>
+            </div>
+
+         
+            <button type="submit" id="enviar" class="enviar__form">Enviar</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
