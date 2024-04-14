@@ -17,6 +17,10 @@ body{
   justify-content: center;
   flex-direction: column;
 }
+.logo{
+  width: 10rem;
+}
+
 
 .formulario_full{
     width: 30rem;
@@ -115,7 +119,7 @@ option{
   font-size: 1rem;
 }
 
-.correo__empresa.campo,.nombre__persona.campo,.nombre__empresa.campo,.select.campo,.estado__empresa.campo{
+.correo__empresa.campo,.nombre__persona.campo,.nombre__empresa.campo,.select.campo,.estado__empresa.campo,.vendedor.campo,.telefono.campo{
   display: flex;
   justify-content:center;
   align-items: center;
@@ -135,6 +139,8 @@ option{
   font-size: 2.5rem 
 }
 
+
+
 .select.campo i {
   color: var(--azul); 
   font-size: 2.5rem 
@@ -145,6 +151,17 @@ option{
   font-size: 2.5rem 
 }
 
+.vendedor.campo i {
+  color: var(--azul); 
+  font-size: 2.5rem 
+}
+
+.telefono.campo i {
+  color: var(--azul); 
+  font-size: 2.5rem 
+}
+
+
 
 .sombra{
   box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
@@ -152,7 +169,9 @@ option{
   padding: 2rem;
   border-radius: 1rem;
 }
-
+.extra{
+  width: 10rem;
+}
 @media (min-width:200px ) and (max-width:599px) {
   .formulario_full{
     width: 20rem;
@@ -189,8 +208,51 @@ option{
   color: wheat;
   border-radius: 0.5rem;
 }
-  .obser_text_area{
+.obser_text_area{
   width: 20rem;
   height: 10rem;
 }
+.consultas{
+  display: none;
 }
+.extra{
+  width: 8rem;
+}
+}
+
+
+  /* Estilo básico del contenedor del checkbox */
+  .label__check {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+  }
+
+  /* Estilo del checkbox */
+  .label__check input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  /* Estilo del texto */
+  .text {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #eee;
+    border-radius: 5px;
+  }
+
+  /* Cuando se hace clic en el texto, cambia el color de fondo */
+  .label__check input:checked + .text {
+    background-color: #2196F3;
+    color: white;
+  }
+
+.campoExtra {
+    display: none;
+}
+.campoExtraArm{
+  display: none;
+}
+
