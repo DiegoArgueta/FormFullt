@@ -256,3 +256,6 @@ option{
   display: none;
 }
 
+.label__check{
+  margin-bottom: 1rem;
+}
